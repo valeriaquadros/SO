@@ -2,13 +2,16 @@
 #include<unistd.h>
 
 int main(void) {
-        int variavel;
+ 
         pid_t pid = fork();
         if(pid == 0)
-                printf("Filho");
+                printf("Filho\n");
         else
-                printf("Pai");
+                if(pid > 0)
+                      printf("Pai\n");
+                else
+                      printf("Erro: não foi possível criar filho.");
 
 		fflush(NULL);
-        return 0;
+    return 0;
 }

@@ -4,14 +4,14 @@
 #include <sys/wait.h>
 
 int main(void) {
-        int variavel;
+        int x;
         pid_t pid = fork();
         if(pid == 0)
-                variavel = 10;
+                x = 10;
         else { 
-                variavel = 100;
+                x = 100;
                 wait(NULL);
         }
-        printf("%d\n", variavel);
+        printf("%d\n", x);
         return 0;
 }
