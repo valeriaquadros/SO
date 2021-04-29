@@ -29,7 +29,7 @@ public class CreationTime {
         for(int i=0; i< numCreations; i++){
         	try {
                 // Adjust the path for the process file
-        		new ProcessBuilder("/home/valeria/lixo/nada").start();
+        		new ProcessBuilder("./nada").start();
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
